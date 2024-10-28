@@ -56,23 +56,11 @@ aside {
     position: relative;
     z-index: -1;
 }
-aside:nth-child(1) {
-    min-width: 300px;
-    height: auto;
-    clip-path: ellipse(100% 80% at 30% 10%);
-}
-aside:nth-last-child(2) {
-    min-width: 300px;
-    clip-path: ellipse(110% 70% at 100% 80%);
-    opacity: 0.3;
-}
 
 main {
-    position: absolute;
-    top: 50%;
-    left: 56%;
-    transform: translate(-50%, -50%);
+    margin: 1rem;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     align-items: center;
     gap: 5vw;
@@ -295,7 +283,8 @@ footer button:active img {
 
 
 #text {
-    width: 45vw;
+    width: 20vw;
+    min-width: 340px;
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -306,25 +295,4 @@ footer button:active img {
 #text p {
     line-height: 25px;
     color: var(--clr-grayBlue);
-}
-
-@media (max-width: 730px) {
-    main {
-        width: 100%;
-        flex-direction: column;
-        top: 53%;
-        left: 50%;
-    }
-    aside:nth-child(1) {
-        height: 50vh;
-    }
-    aside:nth-last-child(2) {
-        display: none;
-    }
-
-    #text {
-        width: 90%;
-        text-align: center;
-    }
-
 }
